@@ -1,14 +1,10 @@
 #!/bin/bash                                      
-#================================================
-==                                               
-# OS Passed:    CentOS7                          
+#================================================                                               
+# OS Passed:    Armbian                          
 # Description:  bash登录时自动发送登录提醒       
-# Author:       kuretru < kuretru@gmail.com >    
-# Github:       https://github.com/kuretru/Script
--Collection                                      
-# Version:      1.1.170725                       
-#================================================
-==                                               
+# Author:       kuretru    
+# Github:       https://github.com/kuretru/                      
+#================================================                                        
                                                  
 #Server酱调用密钥                                
 key='xxxxxxxxxxxxxxx'                                      
@@ -27,5 +23,6 @@ if [[ $ip =~ ^([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.([0-9]{1,2}|1[0-9][0
                                                  
 登陆时间：${now}"                                
 else                                           
+        sudo lastlog -Cu root
         echo "“局域网登陆”"                      
 fi
